@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css?family=Anton|Share+Tech');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap%27');
 
 /* This is the css FOR THE WHOLE WEBSITE - THE WHOLE WEBSITE */
 * {
@@ -11,33 +11,30 @@
 
 /* This is the css for body of the website - BODY OF THE WEBSITE */
 body {
-  font-family: "Raleway";
+  font-family: 'Roboto', sans-serif;
+  position: relative;
 }
 
 
 
 /* This is the css for NAME in the Header - WITHIN THE HEADER */
 .Name {
-  color: black;
   float: left;
-  font-size: 10px;
+  font-size: 14px;
   margin-left: 15px;
-  letter-spacing: 1px;
-  padding: 23.5px 5px;
-  font-family: monospace;
-}
-
-
-/* This is the NAME hover for the "JH-Portfolio" - WITHIN THE HEADER */
-.Name:hover {
+  padding: 23.5px 10px;
+  font-weight: bold;
+  background: #69349f;
   border-bottom: 7px solid #69349f;
 }
+
+
 
 
 /* This is the to remove the unline link for the NAME - WITHIN THE HEADER */
 .name-link {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 
@@ -46,6 +43,10 @@ body {
 .Header {
   background: white;
   text-align: right;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  width: 100%;
 
 }
 
@@ -55,6 +56,7 @@ body {
   width: 100%;
   font-size: 0;
 
+
 }
 
 /* This is the css for the WHOLE list of the Nav bar (The A TAGS) - WITHIN THE HEADER */
@@ -62,18 +64,19 @@ body {
   display: inline-block;
   vertical-align: bottom;
   font-size: 1.2rem;
+
 }
+
 
 
 /* This is the css for the links and to make them look good (The A TAGS) - WITHIN THE HEADER*/
 .menu__link {
-  letter-spacing: 1px;
   display: block;
   text-decoration: none;
-  font-family: monospace;
+  border-bottom: 7px solid transparent;
   padding: 1.5rem;
   color: black;
-  font-weight: bolder;
+  font-weight: bold;
   -webkit-transition: .3s;
           transition: .2s;
 
@@ -92,12 +95,15 @@ body {
     cursor: pointer;
   }
 
+  
+
 
 /* This is the css for the MAIN secion within the middle of the page - MIDDLE OF THE PAGE - HOME PAGE */
   .index-background{
     background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('pic1.jpg');
     background-repeat: no-repeat;
-    height: 83.31vh;
+    position: relative;
+    height: 100vh;
     background-size: cover;
     background-position: center;
   }
@@ -106,18 +112,22 @@ body {
 
 /* This is the css for the footer - WITHIN THE FOOTER  */
   footer {
-    color: #000000;
+    background: #fff;
+    color: black;
     width: 100%;
+    bottom: 0;
+    z-index: 99;
+    position: fixed;
+    display: block;
   }
 
 /* This is the css for the COPYRIGHT text within the footer - WITHIN THE FOOTER */
   .copyright{
     text-align: center;
     font-size: 15px;
-    letter-spacing: -1px;
     font-weight: bold;
     padding: 20px 5px;
-    font-family: monospace;
+   
   }
 
 
@@ -125,23 +135,17 @@ body {
 
 /* This is the css for the BLUR thats in the SMALL WIDGET within he #showcase - MIDDLE OF THE PAGE - HOME PAGE */
   .blur {
-    background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('pic1.jpg') no-repeat center center fixed;
-    background-size: cover;
     overflow: hidden;
-    position: absolute;
     height: 300px;
     top: -50px;
     left: -50px;
     right: -50px;
     bottom: -50px;
-    filter: brightness(0.1);
   }
 
   /* This is the css for the whole animation and and the text font/size postion EVERYTHING - MIDDLE OF THE PAGE - HOME PAGE */
   .ml1 {
-    font-weight: 500;
     color: white;
-    font-size: 15px;
     vertical-align: middle;
     width:800px;
     height: 200px; line-height: 200px;
@@ -152,14 +156,13 @@ body {
     font-size: 40px;
     text-transform: uppercase;
     text-align:center; vertical-align:middle;
-    font-family: 'Anton', sans-serif;
   }
 
   /* This is the css for the letters within the text in the WIDGET/ANIMATION - MIDDLE OF THE PAGE. -HOME PAGE */
   .ml1 .letter {
     display: inline-block;
     line-height: 1em;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
   }
 
 
@@ -194,7 +197,6 @@ body {
 
   /* This is the css for the WIDGET - MIDDLE OF THE PAGE - HOME PAGE */
   .widget  {
-    border: 2px solid rgba(255, 255, 255, .5);
     height: 150px;
     width: 50%;
     overflow: hidden;
@@ -204,8 +206,9 @@ body {
   .center {
     position: absolute;
     margin: auto;
+    height: 100%;
+    width: 100%;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
   }
@@ -216,27 +219,24 @@ body {
 .showcase{
   background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('pic1.jpg');
   background-repeat: no-repeat;
-  height: 83vh;
-  background-size: cover;
+  background-size: stretch;
   background-position: center;
-  display: flex;
+  position: relative;
+    height: 100vh;
 }
 
 /* This is to make the about me box away from the corner - MIDDLE OF THE PAGE - ABOUT ME PAGE */
 .margin-box {
-  margin: 20px;
+  margin: 25px;
 }
 
 /* This is to make the photos boxes - MIDDLE OF THE PAGE - ABOUT ME PAGE */
 .AboutMePhotos {
-  height: 35vh;
-  padding: 10px;
+  height: 31vh;
   margin: 10px;
   background:#FFF;
   border: 5px solid #fff;
-  -moz-box-shadow:    inset 0 0 15px #000000;
-   -webkit-box-shadow: inset 0 0 15px #000000;
-   box-shadow:         inset 0 0 15px #000000
+  border-radius: 10px;
 
 }
 
@@ -302,7 +302,6 @@ body {
 /* This is the SPAN that is in the text so that the underline doesnt go on the Emojis - MIDDLE OF THE PAGE - ABOUT ME PAGE */
 .Photos span {
   text-decoration: underline;
-  font-family: monospace;
   font-size: 20px;
 }
 
@@ -310,13 +309,12 @@ body {
 .Text-AboutmeBox {
   height: 76vh;
   width: 63%;
-  background:#FFF;
+  background:#fff;
   border: 5px solid white;
-  -moz-box-shadow:    inset 0 0 20px #000000;
-   -webkit-box-shadow: inset 0 0 20px #000000;
-   box-shadow:         inset 0 0 20px #000000;
-   opacity: 0.8;
+  border-radius: 10px;
+  margin-top: 7.5vh;
 }
+
 
 /* This is to add the Scroll wheel on the about me box - MIDDLE OF THE PAGE - ABOUT ME PAGE */
 .Text-inbox {
@@ -328,7 +326,6 @@ body {
 /* This is the CSS for the H1 thats in the About me Box - MIDDLE OF THE PAGE - ABOUT ME PAGE */
 .Text-inbox h1{
   margin: 15px;
-  font-family: monospace;
 }
 
 /* This is the CSS for the P thats in the About me Box - MIDDLE OF THE PAGE - ABOUT ME PAGE */
@@ -336,7 +333,6 @@ body {
   margin: 15px;
   font-weight: 500;
   font-size: 22px;
-  font-family: monospace;
 }
 
 /* This is the CSS for the Box that the CV is in - MIDDLE OF THE PAGE - ABOUT ME PAGE */
@@ -362,3 +358,461 @@ body {
   left: 3%;
   top: 3%;
 }
+
+
+@media only screen and (max-width: 600px) {
+  .Name 
+  {
+    font-size: 6px; 
+    border-bottom: 10px solid transparent;
+  }
+  
+  .menu__link
+  {
+    font-size: 13px;
+  }
+   
+  .Text-inbox h1{
+    font-size: 13px;
+  }
+  
+  .Text-inbox p{
+    font-size: 8px;
+  }
+  
+  .copyright{
+    font-size: 8px;
+  }
+  .Photos span{
+    font-size: 8px;
+  }
+  
+  .Text-AboutmeBox {
+    margin-top: 8%;
+    width: 50%;
+  }
+  
+  .AboutMePhotos {
+    height: 21vh;
+    padding: 5px;
+  }
+  
+  .ml1 {
+    font-size: 15px;
+  }
+  
+  .Photo1 {
+    position: absolute;
+    left: 50.5%;
+    top: 10.5%;
+    filter: brightness(0.8);
+  }
+  
+  .Photo2 {
+    position: absolute;
+    left: 65.5%;
+    top: 10.5%;
+    width: 25vh;
+    filter: brightness(0.8);
+  }
+  
+  .Photo3 {
+    position: absolute;
+    left: 81%;
+    top: 10.5%;
+    width: 25vh;
+    filter: brightness(0.8);
+  }
+  
+  
+  .Photo4 {
+    position: absolute;
+    left: 50.5%;
+    top: 60%;
+    width: 25vh;
+    filter: brightness(0.8);
+  }
+  
+  
+  .Photo5 {
+    position: absolute;
+    left: 65.5%;
+    top: 60%;
+    width: 25vh;
+    filter: brightness(0.8);
+  }
+  
+  .Photo6 {
+    position: absolute;
+    left: 81%;
+    top: 60%;
+    width: 25vh;
+    filter: brightness(0.8);
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+.Name 
+{
+  font-size: 8px; 
+  border-bottom: 10px solid transparent;
+}
+
+.menu__link
+{
+  font-size: 15px;
+  border-bottom: 10px solid transparent;
+}
+ 
+.Text-inbox h1{
+  font-size: 15px;
+}
+
+.Text-inbox p{
+  font-size: 10px;
+}
+
+.copyright{
+  font-size: 10px;
+}
+.Photos span{
+  font-size: 10px;
+}
+
+.Text-AboutmeBox {
+  margin-top: 8%;
+  width: 50%;
+}
+
+.AboutMePhotos {
+  height: 21vh;
+  padding: 5px;
+}
+
+.ml1 {
+  font-size: 20px;
+}
+
+.Photo1 {
+  position: absolute;
+  left: 50.5%;
+  top: 10.5%;
+  filter: brightness(0.8);
+}
+
+.Photo2 {
+  position: absolute;
+  left: 65.5%;
+  top: 10.5%;
+  width: 25vh;
+  filter: brightness(0.8);
+}
+
+.Photo3 {
+  position: absolute;
+  left: 81%;
+  top: 10.5%;
+  width: 25vh;
+  filter: brightness(0.8);
+}
+
+
+.Photo4 {
+  position: absolute;
+  left: 50.5%;
+  top: 60%;
+  width: 25vh;
+  filter: brightness(0.8);
+}
+
+
+.Photo5 {
+  position: absolute;
+  left: 65.5%;
+  top: 60%;
+  width: 25vh;
+  filter: brightness(0.8);
+}
+
+.Photo6 {
+  position: absolute;
+  left: 81%;
+  top: 60%;
+  width: 25vh;
+  filter: brightness(0.8);
+}
+
+}
+
+@media only screen and (min-width: 992px) {
+.Name 
+{
+  font-size: 10px; 
+}
+
+.menu__link
+{
+  font-size: 17px;
+}
+ 
+.Text-inbox h1{
+  font-size: 17px;
+}
+
+.Text-inbox p{
+  font-size: 12px;
+}
+
+.copyright{
+  font-size: 12px;
+}
+.Photos span{
+  font-size: 12px;
+}
+
+.Text-AboutmeBox {
+  margin-top: 6%;
+  width: 50%;
+}
+
+.AboutMePhotos {
+  height: 27vh;
+  padding: 5px;
+}
+
+.ml1 {
+  font-size: 25px;
+}
+
+.Photo1 {
+  position: absolute;
+  left: 50.5%;
+  top: 10.5%;
+  filter: brightness(0.8);
+}
+
+.Photo2 {
+  position: absolute;
+  left: 65.5%;
+  top: 10.5%;
+  width: 25vh;
+  filter: brightness(0.8);
+}
+
+.Photo3 {
+  position: absolute;
+  left: 81%;
+  top: 10.5%;
+  width: 25vh;
+  filter: brightness(0.8);
+}
+
+
+.Photo4 {
+  position: absolute;
+  left: 50.5%;
+  top: 50%;
+  width: 25vh;
+  filter: brightness(0.8);
+}
+
+
+.Photo5 {
+  position: absolute;
+  left: 65.5%;
+  top: 50%;
+  width: 25vh;
+  filter: brightness(0.8);
+}
+
+.Photo6 {
+  position: absolute;
+  left: 81%;
+  top: 50%;
+  width: 25vh;
+  filter: brightness(0.8);
+}
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .Name 
+  {
+    font-size: 12px; 
+  }
+  
+  .menu__link
+  {
+    font-size: 19px;
+  }
+   
+  .Text-inbox h1{
+    font-size: 19px;
+  }
+  
+  .Text-inbox p{
+    font-size: 14px;
+  }
+  
+  .copyright{
+    font-size: 14px;
+  }
+  .Photos span{
+    font-size: 14px;
+  }
+  
+  .Text-AboutmeBox {
+    margin-top: 6%;
+    width: 50%;
+  }
+  
+  .AboutMePhotos {
+    height: 27vh;
+    padding: 5px;
+  }
+  
+  .ml1 {
+    font-size: 30px;
+  }
+  
+  .Photo1 {
+    position: absolute;
+    left: 50.5%;
+    top: 12.5%;
+    filter: brightness(0.8);
+  }
+  
+  .Photo2 {
+    position: absolute;
+    left: 65.5%;
+    top: 12.5%;
+    width: 25vh;
+    filter: brightness(0.8);
+  }
+  
+  .Photo3 {
+    position: absolute;
+    left: 81%;
+    top: 12.5%;
+    width: 25vh;
+    filter: brightness(0.8);
+  }
+  
+  
+  .Photo4 {
+    position: absolute;
+    left: 50.5%;
+    top: 50%;
+    width: 25vh;
+    filter: brightness(0.8);
+  }
+  
+  
+  .Photo5 {
+    position: absolute;
+    left: 65.5%;
+    top: 50%;
+    width: 25vh;
+    filter: brightness(0.8);
+  }
+  
+  .Photo6 {
+    position: absolute;
+    left: 81%;
+    top: 50%;
+    width: 25vh;
+    filter: brightness(0.8);
+  }
+
+
+}
+
+@media only screen and (min-width: 1720px) {
+  .AboutMePhotos {
+    height: 31vh;
+    margin: 10px;
+  }
+  .Name 
+  {
+    font-size: 10px; 
+  }
+  
+  .menu__link
+  {
+    font-size: 19px;
+  }
+   
+  .Text-inbox h1{
+    font-size: 25px;
+  }
+  
+  .Text-inbox p{
+    font-size: 20px;
+  }
+  
+  .copyright{
+    font-size: 16px;
+  }
+  .Photos span{
+    font-size: 14px;
+  }
+  .Text-AboutmeBox {
+    height: 76vh;
+    width: 63%;
+    margin-top: 7.5vh;
+  }
+  
+  .ml1 {
+    font-size: 40px;
+  }
+  .Photo1 {
+    position: absolute;
+    left: 63.5%;
+    top: 9%;
+    filter: brightness(0.8);
+  }
+  
+
+  .Photo2 {
+    position: absolute;
+    left: 75.5%;
+    top: 9%;
+    width: 25vh;
+    filter: brightness(0.8);
+  }
+  
+  .Photo3 {
+    position: absolute;
+    left: 88%;
+    top: 9%;
+    width: 25vh;
+    filter: brightness(0.8);
+  }
+  
+  .Photo4 {
+    position: absolute;
+    left: 63.5%;
+    top: 50%;
+    width: 25vh;
+    filter: brightness(0.8);
+  }
+  
+  .Photo5 {
+    position: absolute;
+    left: 75.5%;
+    top: 50%;
+    width: 25vh;
+    filter: brightness(0.8);
+  }
+  
+  .Photo6 {
+    position: absolute;
+    left: 88%;
+    top: 50%;
+    width: 25vh;
+    filter: brightness(0.8);
+  }
+
+}
+
