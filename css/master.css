@@ -5,15 +5,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+
+  overflow: auto;
+}
+
+html {
+  height: 100%;
 }
 
 
 /* This is the css for body of the website - BODY OF THE WEBSITE */
 body {
   font-family: 'Roboto', sans-serif;
+  overflow: auto;
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('pic1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   position: relative;
+  height: 100%;
 }
+
 
 
 
@@ -41,7 +53,7 @@ body {
 .Header {
   background: white;
   text-align: right;
-  position: absolute;
+  position: relative;
   top: 0;
   z-index: 99;
   width: 100%;
@@ -85,25 +97,10 @@ body {
   .menu__link:hover {
     border-bottom: 7px solid #69349f;
     cursor: pointer;
-    justify-content: center;
 
   }
 
   
-
-
-/* This is the css for the MAIN secion within the middle of the page - MIDDLE OF THE PAGE - HOME PAGE */
-  .index-background{
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('pic1.jpg');
-    background-repeat: no-repeat;
-    position: relative;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-
-  }
-
-
 
 /* This is the css for the footer - WITHIN THE FOOTER  */
   footer {
@@ -113,7 +110,6 @@ body {
     bottom: 0;
     z-index: 99;
     position: fixed;
-    display: block;
   }
 
 /* This is the css for the COPYRIGHT text within the footer - WITHIN THE FOOTER */
@@ -127,118 +123,77 @@ body {
 
 
 
-
-/* This is the css for the BLUR thats in the SMALL WIDGET within he #showcase - MIDDLE OF THE PAGE - HOME PAGE */
-  .blur {
-    overflow: hidden;
-    height: 300px;
-    top: -50px;
-    left: -50px;
-    right: -50px;
-    bottom: -50px;
-  }
-
-  /* This is the css for the whole animation and and the text font/size postion EVERYTHING - MIDDLE OF THE PAGE - HOME PAGE */
-  .ml1 {
+  .container {
+    height: 100%;
     color: white;
-    vertical-align: middle;
-    width:800px;
-    height: 200px; line-height: 200px;
-    position: absolute;
-    top: 50%; margin-top:-100px;
-    left: 50%; margin-left:-400px;
-    font-weight: bold;
-    font-size: 40px;
-    text-transform: uppercase;
-    text-align:center; vertical-align:middle;
-  }
-
-  /* This is the css for the letters within the text in the WIDGET/ANIMATION - MIDDLE OF THE PAGE. -HOME PAGE */
-  .ml1 .letter {
-    display: inline-block;
-    line-height: 1em;
-    letter-spacing: 2px;
-  }
-
-
-  /* This is the css for the text wrapper and how close to the text it wil be - MIDDLE OF THE PAGE - HOME PAGE */
-  .ml1 .text-wrapper {
-    position: relative;
-    display: inline-block;
-    padding-top: 0.15em;
-    padding-right: 0.05em;
-    padding-bottom: 0.15em;
-
-  }
-
-  /* This is the css for the lines in the WIDGET/ANIMATION - MIDDLE OF THE PAGE - HOME PAGE */
-  .ml1 .line {
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    height: 4px;
-    width: 100%;
-    background-color: #69349f;
-    transform-origin: 0 0;
-  }
-
-  /* This is the css for the two PURPLE lines - MIDDLE OF THE PAGE - HOME PAGE */
-  .ml1 .line1 {
-    top: 60px;
-  }
-  .ml1 .line2 {
-    bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   /* This is the css for the WIDGET - MIDDLE OF THE PAGE - HOME PAGE */
   .widget  {
-    height: 150px;
-    width: 50%;
+    display: block;
+    width: 100%;
     overflow: hidden;
+    bottom: 0;
+    top: 0;
+    position: relative;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
 
   /* This is the css for the position of the WIDGET - MIDDLE OF THE PAGE - HOME PAGE  */
   .center {
-    position: absolute;
-    margin: auto;
-    height: 100%;
     width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
+    height: 100%;
+  }
+  .container h1 {
+    font-size: 5vh;
   }
 
 
 
 /* This is to make the background image - MIDDLE OF THE PAGE - ABOUT ME PAGE */
 .showcase{
-  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('pic1.jpg');
-  background-repeat: no-repeat;
-  background-size: stretch;
-  background-position: center;
-  position: relative;
-    height: 100vh;
+ width: 100%;
+ position: relative;
+ padding: 10px;
 }
 
 /* This is to make the about me box away from the corner - MIDDLE OF THE PAGE - ABOUT ME PAGE */
-.margin-box {
-  margin: 25px;
-}
+
 
 /* This is to make the photos boxes - MIDDLE OF THE PAGE - ABOUT ME PAGE */
 .AboutMePhotos {
   height: 31vh;
-  margin: 10px;
   background:#FFF;
   border: 5px solid #fff;
   border-radius: 10px;
-
+  padding: 5px;
 }
 
 /* This is the CSS for the text thats under the photo - MIDDLE OF THE PAGE - ABOUT ME PAGE */
 .Photos p {
   color: white;
   font-weight: 500;
+  text-align: center;
+}
+
+.Photos {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 20px; 
 }
 
 /* This is the SPAN that is in the text so that the underline doesnt go on the Emojis - MIDDLE OF THE PAGE - ABOUT ME PAGE */
@@ -249,12 +204,11 @@ body {
 
 /* This is the CSS for the box that has the information about me in - MIDDLE OF THE PAGE - ABOUT ME PAGE */
 .Text-AboutmeBox {
-  height: 76vh;
-  width: 63%;
+  margin-top: 20px; 
+  width: 100%;
   background:#fff;
   border: 5px solid white;
   border-radius: 10px;
-  margin-top: 7.5vh;
 }
 
 
@@ -277,37 +231,15 @@ body {
   font-size: 22px;
 }
 
-/* This is the CSS for the Box that the CV is in - MIDDLE OF THE PAGE - ABOUT ME PAGE */
-.CV-box {
-  width: 40%;
-  height: 80vh;
-  border: 5px solid #fff;
-  background: #fff;
-  margin: 15px;
-  position: absolute;
-  left: 30%;
-  -moz-box-shadow:    inset 0 0 20px #000000;
-   -webkit-box-shadow: inset 0 0 20px #000000;
-   box-shadow:         inset 0 0 20px #000000;
-}
-
-/* This is the CSS for My CV thats in the box - MIDDLE OF THE PAGE - ABOUT ME PAGE */
-.Mycv {
-  height: 700px;
-  width:80%;
-  position: absolute;
-  overflow: hidden;
-  left: 3%;
-  top: 3%;
-}
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .Name 
   {
     font-size: 4px; 
     border-bottom: 14px solid transparent;
   }
+
   
   .menu__link
   {
@@ -330,71 +262,30 @@ body {
   }
   
   .Text-AboutmeBox {
-    margin-top: 8%;
-    width: 50%;
+    padding-bottom: 10px;
+    width: 100%;
+
   }
   
   .AboutMePhotos {
     height: 21vh;
-    padding: 5px;
+
   }
   
-  .ml1 {
-    font-size: 15px;
-  }
-  
-  .Photo1 {
-    position: absolute;
-    left: 50.5%;
-    top: 10.5%;
-    filter: brightness(0.8);
-  }
-  
-  .Photo2 {
-    position: absolute;
-    left: 65.5%;
-    top: 10.5%;
-    width: 25vh;
-    filter: brightness(0.8);
-  }
-  
-  .Photo3 {
-    position: absolute;
-    left: 81%;
-    top: 10.5%;
-    width: 25vh;
-    filter: brightness(0.8);
-  }
-  
-  
-  .Photo4 {
-    position: absolute;
-    left: 50.5%;
-    top: 60%;
-    width: 25vh;
-    filter: brightness(0.8);
-  }
-  
-  
-  .Photo5 {
-    position: absolute;
-    left: 65.5%;
-    top: 60%;
-    width: 25vh;
-    filter: brightness(0.8);
-  }
-  
-  .Photo6 {
-    position: absolute;
-    left: 81%;
-    top: 60%;
-    width: 25vh;
-    filter: brightness(0.8);
-  }
+
+
+  .margin-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    
+    
+    }
 }
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
 .Name 
 {
   font-size: 6px; 
@@ -423,68 +314,40 @@ body {
 }
 
 .Text-AboutmeBox {
-  margin-top: 8%;
+  padding: 10px;
   width: 50%;
-  height: 68.5vh;
 }
 
 .AboutMePhotos {
   height: 21vh;
-  padding: 5px;
 }
 
-.ml1 {
-  font-size: 20px;
+.container h1 {
+  font-size: 5vh;
 }
 
-.Photo1 {
-  position: absolute;
-  left: 52%;
-  top: 12%;
-  filter: brightness(0.8);
+.AboutMePhotos {
+  width: 100%;
 }
 
-.Photo2 {
-  position: absolute;
-  left: 65%;
-  top: 12%;
-  width: 25vh;
-  filter: brightness(0.8);
-}
+.margin-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  }
 
-.Photo3 {
-  position: absolute;
-  left: 78%;
-  top: 12%;
-  width: 25vh;
-  filter: brightness(0.8);
-}
+ 
+ 
 
-
-.Photo4 {
-  position: absolute;
-  left: 52%;
-  top: 60%;
-  width: 25vh;
-  filter: brightness(0.8);
-}
+  .Photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
 
-.Photo5 {
-  position: absolute;
-  left: 65%;
-  top: 60%;
-  width: 25vh;
-  filter: brightness(0.8);
-}
-
-.Photo6 {
-  position: absolute;
-  left: 78%;
-  top: 60%;
-  width: 25vh;
-  filter: brightness(0.8);
-}
 
 }
 
@@ -515,67 +378,38 @@ body {
 }
 
 .Text-AboutmeBox {
-  margin-top: 6%;
+  padding: 10px;
   width: 50%;
 }
 
 .AboutMePhotos {
   height: 27vh;
-  padding: 5px;
 }
 
 .ml1 {
   font-size: 25px;
 }
-
-.Photo1 {
-  position: absolute;
-  left: 50%;
-  top: 9.2%;
-  filter: brightness(0.8);
+.AboutMePhotos {
+  width: 100%;
 }
 
-.Photo2 {
-  position: absolute;
-  left: 65%;
-  top: 9.2%;
-  width: 25vh;
-  filter: brightness(0.8);
-}
+.margin-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  }
 
-.Photo3 {
-  position: absolute;
-  left: 80%;
-  top: 9.2%;
-  width: 25vh;
-  filter: brightness(0.8);
-}
+  
 
-
-.Photo4 {
-  position: absolute;
-  left: 50%;
-  top: 51%;
-  width: 25vh;
-  filter: brightness(0.8);
-}
+  .Photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
 
-.Photo5 {
-  position: absolute;
-  left: 65%;
-  top: 51%;
-  width: 25vh;
-  filter: brightness(0.8);
-}
-
-.Photo6 {
-  position: absolute;
-  left: 80%;
-  top: 51%;
-  width: 25vh;
-  filter: brightness(0.8);
-}
 
 }
 
@@ -611,61 +445,33 @@ body {
   
   .AboutMePhotos {
     height: 27vh;
-    padding: 5px;
+ 
   }
   
   .ml1 {
     font-size: 30px;
   }
   
-  .Photo1 {
-    position: absolute;
-    left: 64%;
-    top: 12%;
-    filter: brightness(0.8);
+  .AboutMePhotos {
+    width: 100%;
   }
+
+  .margin-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    }
+
+    
+
+    .Photo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   
-  .Photo2 {
-    position: absolute;
-    left: 76%;
-    top: 12%;
-    width: 25vh;
-    filter: brightness(0.8);
-  }
-  
-  .Photo3 {
-    position: absolute;
-    left: 88%;
-    top: 12%;
-    width: 25vh;
-    filter: brightness(0.8);
-  }
-  
-  
-  .Photo4 {
-    position: absolute;
-    left: 64%;
-    top: 54%;
-    width: 25vh;
-    filter: brightness(0.8);
-  }
-  
-  
-  .Photo5 {
-    position: absolute;
-    left: 76%;
-    top: 54%;
-    width: 25vh;
-    filter: brightness(0.8);
-  }
-  
-  .Photo6 {
-    position: absolute;
-    left: 88%;
-    top: 54%;
-    width: 25vh;
-    filter: brightness(0.8);
-  }
 
 
 }
@@ -673,7 +479,6 @@ body {
 @media only screen and (min-width: 1720px) {
   .AboutMePhotos {
     height: 31vh;
-    margin: 10px;
   }
   .Name 
   {
@@ -700,61 +505,40 @@ body {
     font-size: 14px;
   }
   .Text-AboutmeBox {
-    height: 70vh;
+    height: 100%;
     width: 63%;
-    margin-top: 10vh;
   }
   
   .ml1 {
     font-size: 40px;
   }
-  .Photo1 {
-    position: absolute;
-    left: 63%;
-    top: 9%;
-    filter: brightness(0.8);
-  }
   
 
-  .Photo2 {
-    position: absolute;
-    left: 75%;
-    top: 9%;
-    width: 25vh;
-    filter: brightness(0.8);
+  .AboutMePhotos {
+    width: 100%;
+   
+
   }
+
+
+  .margin-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    }
+
+   
+
+    .Photo {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+
   
-  .Photo3 {
-    position: absolute;
-    left: 87%;
-    top: 9%;
-    width: 25vh;
-    filter: brightness(0.8);
-  }
-  
-  .Photo4 {
-    position: absolute;
-    left: 63%;
-    top: 48%;
-    width: 25vh;
-    filter: brightness(0.8);
-  }
-  
-  .Photo5 {
-    position: absolute;
-    left: 75%;
-    top: 48%;
-    width: 25vh;
-    filter: brightness(0.8);
-  }
-  
-  .Photo6 {
-    position: absolute;
-    left: 87%;
-    top: 48%;
-    width: 25vh;
-    filter: brightness(0.8);
-  }
 
 }
 
